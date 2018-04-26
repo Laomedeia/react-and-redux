@@ -18,6 +18,7 @@ class Summary extends Component {
   getOwnState() {
     const state = store.getState();
     let sum = 0;
+    console.log(state);
     for (const key in state) {
       if (state.hasOwnProperty(key)) {
         sum += state[key];

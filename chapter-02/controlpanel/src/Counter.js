@@ -10,7 +10,7 @@ class Counter extends Component {
     console.log('enter constructor: ' + props.caption);
     super(props);
 
-    this.onClickIncrementButton = this.onClickIncrementButton.bind(this);
+    // this.onClickIncrementButton = this.onClickIncrementButton.bind(this);
     this.onClickDecrementButton = this.onClickDecrementButton.bind(this);
 
     this.state = {
@@ -58,7 +58,7 @@ class Counter extends Component {
     const {caption} = this.props;
     return (
       <div>
-        <button style={buttonStyle} onClick={this.onClickIncrementButton}>+</button>
+        <button style={buttonStyle} onClick={(event) => this.onClickIncrementButton()}>+</button>
         <button style={buttonStyle} onClick={this.onClickDecrementButton}>-</button>
         <span>{caption} count: {this.state.count}</span>
       </div>
