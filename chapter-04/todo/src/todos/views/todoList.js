@@ -55,9 +55,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(removeTodo(id));
     }
   };
-};
+};  
 
 /*
+// mapDispatchToProps的简写方法
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   onToggleTodo: toggleTodo,
   onRemoveTodo: removeTodo
